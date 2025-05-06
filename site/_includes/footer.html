@@ -1,0 +1,12 @@
+<footer class="bg-[#141E30] text-gray-400 py-8">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+    <p class="text-sm">© {{ "now" | date: "%Y" }} Tensor Standards Consortium</p>
+    <nav class="mt-4 md:mt-0">
+      <ul class="flex space-x-4 text-sm">
+        {% for item in site.navigation limit:5 offset:1 %}
+          <li><a href="{{ item.url | relative_url }}" class="hover:text-white">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</footer>

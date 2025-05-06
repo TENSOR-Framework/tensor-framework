@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<section class="relative overflow-hidden">
+  <div class="hero-bg absolute inset-0 bg-cover bg-center"
+       style="background-image:url('{{ '/assets/img/mesh.png' | relative_url }}')">
+  </div>
+  <div class="relative container mx-auto px-4 py-24 text-center text-white">
+    <h1 class="text-5xl font-extrabold mb-4">TENSOR Framework</h1>
+    <p class="text-xl mb-6">
+      Threat Evaluation &amp; Neutralization through Structured Organizational Resilience
+    </p>
+    <p class="max-w-xl mx-auto mb-8">
+      A vendor-neutral, graph-driven SOC methodology — rapidly map, validate,
+      and respond to threats with confidence.
+    </p>
+    <div class="flex justify-center items-center space-x-4">
+      <a href="{{ '/docs/' | relative_url }}"
+         class="px-6 py-3 bg-gradient-to-r from-[#43D9BE] to-[#2A76D1]
+                rounded-lg font-medium">
+        Explore the Framework
+      </a>
+      <span class="bg-white bg-opacity-20 text-white px-4 py-2 rounded">
+        Version {{ site.time | date: '%Y%m%d' }}
+      </span>
+    </div>
+  </div>
+  <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2
+              w-[120%] h-64 bg-gradient-to-t from-[#43D9BE] to-transparent
+              rounded-full">
+  </div>
+</section>
+
+<section class="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+  {% assign features = "Extensible|Layer extension graphs without altering the core.;Standardized|Preserve structured integrity and clear repo layout.;Performant|Lightweight graphs render quickly in any browser." | split:';' %}
+  {% for f in features %}
+    {% assign parts = f | split:'|' %}
+    <div class="feature-card p-6 rounded-lg bg-white bg-opacity-10">
+      <h3 class="text-2xl font-semibold mb-2">{{ parts[0] }}</h3>
+      <p>{{ parts[1] }}</p>
+    </div>
+  {% endfor %}
+</section>

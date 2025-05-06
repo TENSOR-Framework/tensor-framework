@@ -1,0 +1,10 @@
+@import 'variables';
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:$font-stack; color:$dark; background:$light; line-height:1.6; }
+.container { max-width:1200px; margin:0 auto; padding:0 1rem; }
+.hero-bg { background-size:cover; background-position:center; }
+.section-hero { position:relative; text-align:center; color:$light; padding:6rem 0; }
+.btn { display:inline-block; padding:.75rem 1.5rem; border-radius:.5rem; text-decoration:none; font-weight:500; }
+.btn-primary { background:linear-gradient(135deg,$accent 0%,$primary 100%); color:$light; }
+.half-circle { position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:120%; height:16rem; background:linear-gradient(to top,$accent,transparent); border-radius:50%; }
+.feature-card { background:rgba(255,255,255,0.1); padding:1.5rem; border-radius:.5rem; }

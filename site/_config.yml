@@ -1,0 +1,28 @@
+title: "Tensor Framework"
+markdown: kramdown
+sass:
+  style: compressed
+
+collections:
+  graphs:
+    output: true
+    permalink: /graphs/:path/
+  schemas:
+    output: true
+    permalink: /schemas/:path/
+
+navigation:
+  - title: "About"
+    url: "/pages/about.html"
+  - title: "Docs"
+    url: "/pages/docs.html"
+  - title: "Schemas"
+    url: "/schemas/"
+  - title: "Graphs"
+    url: "/graphs/"
+  - title: "Extensions"
+    url: "/pages/extensions.html"
+  - title: "Studio"
+    url: "/pages/studio.html"
+  - title: "GitHub"
+    url: "https://github.com/tensor-standards-consortium/tensor-framework"
