@@ -1,11 +1,8 @@
 ---
 ---
 
-// 1. Core variables & resets
-@import "../_sass/variables";
-@import "../_sass/base";
-
-// 2. Layout pieces
-@import "../_sass/header";
-@import "../_sass/hero";
-@import "../_sass/footer";
+@import "variables";
+@import "base";
+@import "header";
+@import "hero";
+@import "footer";
