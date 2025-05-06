@@ -1,0 +1,22 @@
+{
+  "name": "TENSOR Framework Development Container",
+  "image": "mcr.microsoft.com/devcontainers/jekyll",
+  "postCreateCommand": "echo 'Run bundle install && curl vendor libs inside container'",
+  "forwardPorts": [4000, 35729],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "css.lint.unknownAtRules": "ignore",
+        "scss.lint.unknownAtRules": "ignore"
+      },
+      "extensions": [
+        "Shopify.ruby-lsp",          // Ruby language server
+        "KoichiSasada.vscode-rdbg",  // Ruby debugger
+        "esbenp.prettier-vscode",    // Prettier formatter
+        "dbaeumer.vscode-eslint",    // ESLint
+        "ms-azuretools.vscode-docker"// Docker support
+      ]
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TENSOR Core Schema",
+    "type": "object",
+    "required": ["nodes", "edges"],
+    "properties": {
+      "tensorVersion": {
+        "type": "string",
+        "description": "Semver of this graph template (e.g. \"0.2.1\")."
+      },
+      "generatedAt": {
+        "type": "string",
+        "format": "date-time",
+        "description": "RFC‑3339 timestamp when this file was produced."
+      },
+      "nodes": {
+        "type": "array",
+        "description": "List of all investigative questions (the graph nodes).",
+        "items": { "$ref": "#/definitions/node" }
+      },
+      "edges": {
+        "type": "array",
+        "description": "List of all branches between questions (the graph edges).",
+        "items": { "$ref": "#/definitions/edge" }
+      }
+    },
+    "additionalProperties": false,
+  
+    "definitions": {
+      "node": {
+        "type": "object",
+        "required": ["data"],
+        "properties": {
+          "data": {
+            "type": "object",
+            "required": ["id", "text", "category", "weight"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Unique node identifier (e.g. \"Q1\")."
+              },
+              "text": {
+                "type": "string",
+                "description": "Full investigative question."
+              },
+              "category": {
+                "type": "string",
+                "enum": ["File", "Email", "Host", "Network", "User/Identity", "Cloud", "Application"],
+                "description": "One of the seven investigation domains."
+              },
+              "weight": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5,
+                "description": "Relative priority, 1 (low)–5 (high)."
+              },
+              "label": {
+                "type": "string",
+                "description": "(Optional) Short label for graph visuals."
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+  
+      "edge": {
+        "type": "object",
+        "required": ["data"],
+        "properties": {
+          "data": {
+            "type": "object",
+            "required": ["id", "source", "target", "decision"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Unique edge identifier (e.g. \"Q1-yes-Q2\")."
+              },
+              "source": {
+                "type": "string",
+                "description": "ID of the source node."
+              },
+              "target": {
+                "type": "string",
+                "description": "ID of the target node."
+              },
+              "decision": {
+                "type": ["string", "null"],
+                "enum": ["yes", "no", "unknown", null],
+                "description": "Branch decision: yes | no | unknown | null (unanswered)."
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+  
