@@ -10,7 +10,3 @@ _site/
 
 # OS files
 .DS_Store
-
-# Keep IDE configs
-.vscode/
-.devcontainer/
