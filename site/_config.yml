@@ -1,7 +1,13 @@
-title: "Tensor Framework"
+title: "TENSOR Framework"
 markdown: kramdown
 sass:
   style: compressed
+
+defaults:
+  - scope:
+      path: "pages"
+    values:
+      permalink: "/:basename/"
 
 collections:
   graphs:
@@ -11,18 +17,19 @@ collections:
     output: true
     permalink: /schemas/:path/
 
+# site/_config.yml
 navigation:
   - title: "About"
-    url: "/pages/about.html"
+    url: "/about/"
   - title: "Docs"
-    url: "/pages/docs.html"
+    url: "/docs/"
   - title: "Schemas"
     url: "/schemas/"
   - title: "Graphs"
     url: "/graphs/"
   - title: "Extensions"
-    url: "/pages/extensions.html"
-  - title: "Studio"
-    url: "/pages/studio.html"
+    url: "/extensions/"
+  - title: "Graph Studio"
+    url: "/studio/"
   - title: "GitHub"
     url: "https://github.com/tensor-standards-consortium/tensor-framework"

@@ -1,8 +1,6 @@
 ---
 layout: default
-title: "Docs"
+title: "Documentation"
 ---
-
-# Docs
 
 (Describe the docs page here.)

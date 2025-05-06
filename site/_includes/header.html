@@ -1,15 +1,16 @@
-<header class="bg-transparent absolute w-full z-10">
-  <div class="container mx-auto px-4 py-6 flex justify-between items-center">
-    <a href="/" class="flex items-center space-x-2">
-      <img src="{{ '/assets/img/logo-tensor-icon.png' | relative_url }}" alt="TENSOR Logo" class="h-8">
-      <span class="font-bold text-white text-xl">TENSOR</span>
+<!-- site/_includes/header.html -->
+<header>
+  <div class="header-logo">
+    <a href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/img/logo-tensor-icon.png' | relative_url }}" alt="TENSOR Logo">
+      <span>TENSOR</span>
     </a>
-    <nav>
-      <ul class="flex space-x-4 text-white">
-        {% for item in site.navigation %}
-          <li><a href="{{ item.url | relative_url }}" class="hover:underline">{{ item.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
   </div>
+  <nav class="header-nav">
+    <ul>
+      {% for item in site.navigation %}
+        <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
 </header>

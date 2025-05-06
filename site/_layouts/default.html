@@ -1,11 +1,22 @@
+<!-- site/_layouts/default.html -->
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body class="bg-white text-gray-900">
+  <body>
     {% include header.html %}
+
+    {%- unless page.layout == "home" -%}
+    <section class="page-title-bar">
+      <div class="container">
+        <h1 class="page-title">{{ page.title }}</h1>
+      </div>
+    </section>
+    {%- endunless -%}
+
     <main>
       {{ content }}
     </main>
+
     {% include footer.html %}
   </body>
 </html>
