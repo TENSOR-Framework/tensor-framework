@@ -1,3 +1,54 @@
 ---
 layout: default
 ---
+
+<section class="section-hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <div class="hero-logo">
+      <!-- switch to icon-only SVG/PNG, so we don’t duplicate “Tensor” in text -->
+      <img
+        src="{{ '/assets/img/logo-tensor-icon.png' | relative_url }}"
+        alt="Tensor icon"
+      />
+    </div>
+    <div class="hero-text">
+      <h1 class="hero-title">TENSOR Framework</h1>
+      <h2 class="hero-definition">
+        Threat Evaluation & Neutralization through Structured Organizational Resilience
+      </h2>
+      <p class="hero-tagline">
+        A vendor-neutral, graph-driven SOC methodology—rapidly map, validate, and investigate threats with confidence.
+      </p>
+      <div class="cta-group">
+        <a class="btn btn-primary" href="{{ '/docs/' | relative_url }}">
+          Explore the Framework
+        </a>
+        <span class="btn version-label">
+          Version {{ site.data.version.current }}
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-features container">
+  <div class="feature-card">
+    <h3>Standardized</h3>
+    <p>
+      Maintain structured integrity and a clear repository layout across your entire investigation lifecycle.
+    </p>
+  </div>
+  <div class="feature-card">
+    <h3>Extensible</h3>
+    <p>
+      Easily layer custom extension graphs onto the core schema to adapt to new tools and evolving threats.
+    </p>
+  </div>
+  <div class="feature-card">
+    <h3>Hybrid Human-AI Collaboration</h3>
+    <p>
+      Investigate alongside AI agents in a shared graph—edit nodes, run checks, and co-investigate threats seamlessly.
+    </p>
+  </div>
+</section>

@@ -1,0 +1,85 @@
+// site/_sass/_hero.scss
+
+.section-hero {
+    position: relative;
+    padding: 6rem 0 8rem;
+    color: $light;
+    /* ensure headings and paragraphs all inherit left alignment */
+    text-align: left;
+  
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, $dark 0%, $primary 100%);
+      z-index: 0;
+    }
+  
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;    // <— center the logo+text as a group
+      gap: 2rem;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+  
+    .hero-logo {
+      flex: 0 0 auto;
+      display: flex;
+      justify-content: center;
+  
+      img {
+        width: clamp(60px, 15vw, 180px);
+        height: auto;
+      }
+    }
+  
+    .hero-text {
+      flex: 1 1 0;
+      /* explicitly left-align everything in here */
+      text-align: left;
+  
+      .hero-title {
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin: 0 0 0.5rem;
+        line-height: 1.1;
+      }
+  
+      .hero-definition {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        margin: 0 0 1rem;
+        font-weight: 400;
+      }
+  
+      .hero-tagline {
+        font-size: clamp(0.9rem, 2vw, 1.125rem);
+        margin: 0 0 1.5rem;
+        max-width: 600px;
+        line-height: 1.4;
+      }
+  
+      .cta-group {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+  
+        .btn-primary {
+          /* your existing primary button styles */
+        }
+  
+        .version-label {
+          background: $dark;       // using your existing $dark
+          color: $light;
+          font-size: 1rem;
+          padding: 0.75rem 1.5rem; // match .btn-primary
+          border-radius: 0.5rem;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  
