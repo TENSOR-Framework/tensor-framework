@@ -1,12 +1,19 @@
-# Jekyll build output
+# macOS
+.DS_Store
+
+# Editor / tooling
+.vscode/
+.idea/
+*.swp
+
+# Ruby
+.bundle/
+vendor/
+
+# Jekyll build artefacts
 _site/
 .jekyll-cache/
-.sass-cache/
-.jekyll-metadata
 
-# Bundler
-/.bundle
-/vendor/bundle
-
-# OS files
-.DS_Store
+# Logs / temp
+*.log
+tmp/

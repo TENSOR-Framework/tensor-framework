@@ -15,9 +15,9 @@
       "problemMatcher": []
     },
     {
-      "label": "Take Snapshot",
+      "label": "Generate Tar Snapshot",
       "type": "shell",
-      "command": "./tools/take_snapshot.sh",
+      "command": "tar --exclude='.git' --exclude='_site' --exclude='snapshots' --exclude='*.png' --exclude='*.jpg' --exclude='*.svg' -czf tensor-review-src.tgz .",
       "problemMatcher": []
     }
   ]
