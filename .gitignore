@@ -9,9 +9,11 @@
 # Ruby
 .bundle/
 vendor/
+!site/studio/vendor/
 
 # Jekyll build artefacts
 _site/
+site/_site/
 .jekyll-cache/
 
 # Logs / temp
